@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>旅游行程规划系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>旅游行程规划系统</h1>
+        <div class="input-area">
+            <label>兴趣类型：</label>
+            <select id="interest">
+                <option value="人文">人文</option>
+                <option value="自然">自然</option>
+                <option value="娱乐">娱乐</option>
+            </select>
+            <label>最大游玩时间（小时）：</label>
+            <input type="number" id="max_time" value="5">
+            <label>餐饮口味：</label>
+            <select id="taste">
+                <option value="清淡">清淡</option>
+                <option value="辣">辣</option>
+                <option value="甜">甜</option>
+            </select>
+            <button onclick="loadPlan()">生成行程方案</button>
+        </div>
+
+        <div class="result-area">
+            <h2>行程总览</h2>
+            <p>总耗时：<span id="total_time">0</span> 小时</p>
+            <p>总费用：<span id="total_cost">0</span> 元</p>
+
+            <h3>每日行程</h3>
+            <table id="schedule_table">
+                <tr>
+                    <th>景点</th>
+                    <th>游玩时间</th>
+                    <th>交通方式</th>
+                    <th>推荐餐饮</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
